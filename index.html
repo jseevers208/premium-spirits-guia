@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Guía de uso · Premium Spirits</title>
+<link rel="icon" href="https://ps-onvo.com/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Marcellus&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--marfil:#F4EFE6;--lino:#FAF7F2;--papel:#EFE8DC;--tinta:#1B1714;--grafito:#3E3733;--piedra:#5C544C;--linea:#CFC7BB;--cobre:#9A5A33;--ambar:#D4A24C;--ebano:#120E0A;--ebano2:#1A140E;--pergamino:#F2ECE1;--humo:#A99F92;--ok:#2F5D3A;--warn:#8A4B1F}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--marfil);color:var(--tinta);font-family:Archivo,system-ui,sans-serif;font-size:16px;line-height:1.6}
+a{color:var(--cobre)}img{max-width:100%;display:block}
+.eyebrow{font-family:Marcellus,serif;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cobre)}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:400;line-height:1.05;margin:0}
+h1{font-size:clamp(2.4rem,5vw,4.2rem)}h2{font-size:clamp(1.9rem,3.4vw,2.8rem)}h3{font-size:1.5rem}
+.top{position:sticky;top:0;z-index:20;background:rgba(244,239,230,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.top .in{max-width:1180px;margin:0 auto;padding:.7rem 1.25rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.wordmark{font-family:Marcellus,serif;letter-spacing:.18em;font-size:.9rem}.wordmark small{display:block;font-size:.5rem;letter-spacing:.28em;color:var(--piedra)}
+.prog{flex:1;min-width:160px;display:flex;align-items:center;gap:.6rem;font-size:.78rem;color:var(--piedra)}
+.bar{flex:1;height:4px;background:var(--papel);border:1px solid var(--linea)}.bar i{display:block;height:100%;background:var(--cobre);width:0;transition:width .4s}
+.search{border:1px solid var(--linea);background:#fff;padding:.5rem .8rem;font:inherit;font-size:.9rem;min-width:220px;color:var(--tinta)}
+.search:focus{outline:2px solid var(--cobre);outline-offset:1px}
+.btn{font-family:Marcellus,serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--tinta);background:var(--tinta);color:var(--pergamino);padding:.6rem 1rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--tinta)}
+.hero{background:var(--ebano);color:var(--pergamino);padding:4.5rem 1.25rem 3.5rem;position:relative}
+.hero .in{max-width:1180px;margin:0 auto}.hero .eyebrow{color:var(--ambar)}
+.hero p{max-width:60ch;color:var(--humo);font-size:1.05rem}
+.frame{position:absolute;inset:14px;border:1px solid rgba(212,162,76,.35);pointer-events:none}
+.frame:before,.frame:after,.frame i:before,.frame i:after{content:"";position:absolute;width:14px;height:14px;border-color:var(--ambar);border-style:solid}
+.frame:before{top:-1px;left:-1px;border-width:2px 0 0 2px}.frame:after{top:-1px;right:-1px;border-width:2px 2px 0 0}.frame i:before{bottom:-1px;left:-1px;border-width:0 0 2px 2px}.frame i:after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+.layout{max-width:1180px;margin:0 auto;padding:2rem 1.25rem 5rem;display:grid;grid-template-columns:260px 1fr;gap:2.5rem}
+.toc{position:sticky;top:84px;align-self:start;max-height:calc(100vh - 100px);overflow:auto;font-size:.88rem}
+.toc .eyebrow{margin-bottom:.6rem}.toc a{display:block;color:var(--tinta);text-decoration:none;padding:.3rem 0;border-bottom:1px solid var(--linea)}
+.toc a.sub{padding-left:1rem;color:var(--piedra);font-size:.82rem}.toc a.done{color:var(--ok)}.toc a.done:before{content:"✓ "}
+.chap{margin:0 0 3.5rem}.chap>header{margin-bottom:1.4rem}.chap>header p{color:var(--piedra);max-width:70ch;margin:.5rem 0 0}
+.roles{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem}.role{font-family:Marcellus,serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--linea);padding:.25rem .5rem;color:var(--piedra)}
+.step{background:var(--lino);border:1px solid var(--linea);padding:1.5rem;margin:0 0 1.25rem;scroll-margin-top:90px}
+.step.done{border-color:var(--ok)}
+.step .head{display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap}
+.num{font-family:"Cormorant Garamond",serif;font-size:2rem;line-height:1;color:var(--cobre);min-width:2.4rem}
+.meta{margin-left:auto;display:flex;gap:.8rem;align-items:center;font-size:.78rem;color:var(--piedra)}
+.chk{display:flex;align-items:center;gap:.4rem;cursor:pointer;user-select:none}.chk input{width:18px;height:18px;accent-color:var(--cobre)}
+.why{color:var(--grafito);margin:.5rem 0 1rem;font-style:italic;font-family:"Cormorant Garamond",serif;font-size:1.2rem}
+.body{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+ol.acts{margin:0;padding-left:1.3rem}ol.acts li{margin:.45rem 0}ol.acts b{font-weight:600}
+figure{margin:0;border:1px solid var(--linea);background:#fff;padding:.5rem}figure img{width:100%;cursor:zoom-in;aspect-ratio:16/10;object-fit:cover;object-position:top}
+figure.tall img{aspect-ratio:9/16;object-fit:contain;background:#111}
+figcaption{font-size:.78rem;color:var(--piedra);padding:.45rem .2rem 0}
+.done-box{margin-top:1rem;border-left:3px solid var(--ok);background:#fff;padding:.7rem 1rem;font-size:.92rem}.done-box b{color:var(--ok)}
+.warn{margin-top:1rem;border-left:3px solid var(--warn);background:#fff;padding:.7rem 1rem;font-size:.92rem}.warn b{color:var(--warn)}
+.proto{background:#fff;border:1px solid var(--linea);padding:1.25rem;margin-bottom:1rem}.proto h3{margin-bottom:.4rem}.proto ol{margin:.3rem 0 0;padding-left:1.3rem}
+.faq{border-top:1px solid var(--linea)}.faq details{border-bottom:1px solid var(--linea);padding:.8rem 0}.faq summary{cursor:pointer;font-weight:600}.faq p{margin:.5rem 0 0;color:var(--grafito)}
+.help{background:var(--ebano);color:var(--pergamino);padding:2.5rem 1.25rem;margin-top:3rem}.help .in{max-width:1180px;margin:0 auto}.help a{color:var(--ambar)}
+.lb{position:fixed;inset:0;background:rgba(18,14,10,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:2rem}.lb.on{display:flex}.lb img{max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-out}
+.hidden{display:none!important}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.toc{position:static;max-height:none;margin-bottom:1rem}.body{grid-template-columns:1fr}}
+@media print{.top,.toc,.lb,.btn,.chk,.search{display:none!important}.layout{display:block;padding:0}.step{break-inside:avoid;border:1px solid #999}body{background:#fff}.hero{background:#fff;color:#000}.hero p{color:#333}figure img{aspect-ratio:auto}}
+</style>
+</head>
+<body>
+<div class="top"><div class="in">
+ <div class="wordmark">PREMIUM SPIRITS<small>GUÍA DE USO DE LA PLATAFORMA</small></div>
+ <div class="prog"><span id="pct">0 % completado</span><div class="bar"><i id="fill"></i></div></div>
+ <input class="search" id="q" type="search" placeholder="Buscar un paso (ej. factura, link de pago, combo)…" aria-label="Buscar en la guía">
+ <button class="btn ghost" id="reset" type="button">Reiniciar progreso</button>
+ <button class="btn" type="button" onclick="window.print()">Imprimir / PDF</button>
+</div></div>
+
+<section class="hero"><div class="frame"><i></i></div><div class="in">
+ <div class="eyebrow">Guía de uso · ps-onvo.com</div>
+ <h1>Opere Premium Spirits<br>desde una sola plataforma</h1>
+ <p>Tienda, pedidos, clientes B2B, cuentas por cobrar, inventario, ofertas, facturación electrónica, reportes y dos agentes de inteligencia artificial. Esta guía va por rol y por tarea: cada paso dice por qué se hace, qué hacer, cómo se ve en pantalla y cómo saber que terminó. Marque los pasos a medida que los complete; el avance queda guardado en su navegador.</p>
+</div></section>
+
+<div class="layout">
+<nav class="toc" id="toc"><div class="eyebrow">Contenido</div></nav>
+<main id="main">
+
+<section class="chap" id="inicio" data-chap="1 · Primeros pasos">
+<header><div class="eyebrow">Capítulo 1</div><h2>Primeros pasos</h2><p>Lo mínimo para entrar, orientarse y cambiar la contraseña. Diez minutos.</p>
+<div class="roles"><span class="role">Todos los roles</span></div></header>
+
+<article class="step" id="s1-1" data-title="Ingresar al panel de administración">
+ <div class="head"><div class="num">1.1</div><div><h3>Ingresar al panel</h3></div><div class="meta"><span>2 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Todo lo operativo vive en el admin; la tienda pública es solo la vitrina.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>Abra <b>https://ps-onvo.com/admin/login</b>.</li>
+   <li>Escriba el correo con el que fue dado de alta y su contraseña. Solo entran cuentas autorizadas.</li>
+   <li>Si olvidó la contraseña, use <b>¿Olvidó su contraseña?</b> y siga el enlace que llega al correo (válido alrededor de una hora).</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> ve el Panel con los indicadores del día y el Resumen del gerente.</div>
+  <div class="warn"><b>Ojo.</b> Si entra y no ve un módulo del menú, su rol no lo incluye. Revise el Panel de control (paso 1.3) o pida a un superadmin que ajuste el rol.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/admin-login.jpg" alt="Pantalla de ingreso al admin"><figcaption>Ingreso: correo y contraseña; recuperación por enlace al correo.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s1-2" data-title="Leer el Panel y el Resumen del gerente">
+ <div class="head"><div class="num">1.2</div><div><h3>Leer el Panel y el Resumen del gerente</h3></div><div class="meta"><span>3 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">El Panel es la foto del día; el Resumen del gerente la interpreta y propone acciones.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>Arriba: ventas de hoy, pedidos por preparar, cuentas B2B por aprobar y alertas de inventario.</li>
+   <li><b>Resumen del gerente</b>: ventas de ayer y de la semana contra la anterior, demanda de reposición, lo más consultado por el Concierge y tres acciones recomendadas con botón directo.</li>
+   <li><b>Reporte rápido</b>: un botón genera el resumen ejecutivo del momento y lo envía a los administradores suscritos.</li>
+   <li>Abajo, los últimos pedidos y los productos bajo mínimo proyectado.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> identifica qué requiere acción hoy sin abrir ningún otro módulo.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/dashboard.jpg" alt="Panel con Resumen del gerente"><figcaption>Panel: indicadores, Resumen del gerente, alertas y últimos pedidos.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s1-3" data-title="Conocer su rol y cambiar la contraseña">
+ <div class="head"><div class="num">1.3</div><div><h3>Conocer su rol y cambiar la contraseña</h3></div><div class="meta"><span>3 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Cinco roles (superadmin, admin, ventas, operaciones, lectura) deciden qué ve y qué puede cambiar cada persona.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>Abra <b>Panel de control</b>: muestra, para su rol, lo que puede cambiar usted mismo y la tabla completa de permisos.</li>
+   <li>Arriba a la derecha, menú <b>Cuenta</b> → <b>Cambiar contraseña</b> (mínimo 10 caracteres, dos veces).</li>
+   <li>En el mismo menú puede elegir densidad <b>compacta</b> o <b>cómoda</b> para las tablas.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> sabe qué módulos le corresponden y entra con una contraseña propia.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/panel-de-control.jpg" alt="Panel de control por rol"><figcaption>Panel de control: qué puede cambiar cada rol, con accesos directos.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="tienda" data-chap="2 · La tienda, vista por el cliente">
+<header><div class="eyebrow">Capítulo 2</div><h2>La tienda, vista por el cliente</h2><p>Para explicar el sitio a un cliente o probar una compra. Conviene recorrerlo una vez como comprador.</p>
+<div class="roles"><span class="role">Todos</span><span class="role">Ventas</span></div></header>
+
+<article class="step" id="s2-1" data-title="Recorrer la tienda y el catálogo">
+ <div class="head"><div class="num">2.1</div><div><h3>Recorrer la tienda y el catálogo</h3></div><div class="meta"><span>5 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">El catálogo prioriza las marcas distribuidas sobre las codistribuidas y agrupa por familia, casa o país.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>ps-onvo.com</b> acepte la verificación de edad (Ley 9047) y vea la portada: video, categorías, selección de la casa, casas y rituales.</li>
+   <li>En <b>Colección</b> filtre por casa, país, precio y volumen; use <b>Agrupar por</b> y <b>Ordenar</b>. La barra de filtros se queda pegada arriba.</li>
+   <li>La <b>lupa</b> del header busca productos, casas y categorías sin importar tildes.</li>
+   <li>Abra una ficha: galería (máximo 4 fotos), precio con IVA, ritual de servicio y "De la misma casa".</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> encuentra cualquier botella en menos de tres clics.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/catalogo-filtros.jpg" alt="Catálogo con filtros"><figcaption>Catálogo agrupado por categoría con filtros y barra fija.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s2-2" data-title="Hacer una compra de prueba con código">
+ <div class="head"><div class="num">2.2</div><div><h3>Hacer una compra de prueba con código de promoción</h3></div><div class="meta"><span>8 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Así verá exactamente lo que ve el comprador: carrito, código, datos, entrega, factura electrónica y pago con ONVO.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>Agregue una botella al carrito y, si existe un código (ver 5.1), escríbalo en <b>Código de promoción</b>; el total se recalcula.</li>
+   <li><b>Datos</b>: nombre, correo, teléfono y, opcionalmente, <b>Datos para factura electrónica</b> (tipo y número de cédula, razón social, correo de factura y código de actividad de Hacienda).</li>
+   <li><b>Entrega</b>: provincia, cantón, distrito y señas; la tarifa y el mínimo salen de la tabla de envíos por zona, o elija retiro.</li>
+   <li><b>Pago</b>: tarjeta (Visa, Mastercard, Amex) cifrada directo a ONVO, o SINPE Móvil. Marque la confirmación de mayoría de edad.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> llega al botón <b>Pagar</b> con el total correcto. Si solo está probando, no pague: con llaves live se cobra de verdad.</div>
+  <div class="warn"><b>Ojo.</b> Para una prueba real de punta a punta compre el producto más barato con retiro, verifique el pedido en Pedidos y reembolse desde ahí (repone el stock).</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/checkout-pago.jpg" alt="Checkout paso de pago"><figcaption>Pago: formulario de tarjeta cifrado por ONVO, SINPE Móvil y total con el código aplicado.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s2-3" data-title="Cómo entra un cliente de mayoreo">
+ <div class="head"><div class="num">2.3</div><div><h3>Cómo entra un cliente de mayoreo (B2B)</h3></div><div class="meta"><span>5 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Restaurantes, hoteles y licoreras compran con su lista especial y bajo revisión de crédito.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>El cliente solicita acceso en <b>Mayoreo</b>; usted lo aprueba en Clientes (paso 4.2) y le genera un <b>código de cliente</b>.</li>
+   <li>Con ese código crea su cuenta en <b>Cuenta → Registro</b> y desde entonces ve "Su precio" junto a la lista pública.</li>
+   <li>Sus pedidos pasan por la verificación de crédito antes de liberarse; en <b>Mis pedidos</b> puede repetir pedidos anteriores.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> un cliente aprobado ve precios especiales al iniciar sesión.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/registro-b2b.jpg" alt="Registro con código B2B"><figcaption>Registro de cuenta con código de cliente para precios especiales.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s2-4" data-title="El Concierge: el sommelier de la tienda">
+ <div class="head"><div class="num">2.4</div><div><h3>El Concierge, sommelier de la tienda</h3></div><div class="meta"><span>4 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Atiende, recomienda y vende las 24 horas con productos y precios reales; escala a un asesor cuando hace falta.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>Abra el botón <b>Concierge</b> (abajo a la derecha). Pruebe "un regalo para alguien que ama el whisky" o "una fiesta de 100 personas con ₡1 millón".</li>
+   <li>Las respuestas traen tarjetas con <b>Ver</b> y <b>Agregar</b>; los planes de evento tienen <b>Agregar todo al carrito</b>.</li>
+   <li>Si el cliente pide hablar con alguien, el Concierge captura sus datos y crea un <b>caso</b> para el equipo.</li>
+   <li>Su voz, reglas y ejemplos se editan en <b>Agentes</b> (capítulo 7).</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> agregó una botella al carrito desde el chat.</div>
+ </div><figure class="tall"><img data-src="https://ps-onvo.com/guia/shots/concierge-movil.jpg" alt="Concierge en móvil"><figcaption>Concierge en el teléfono con tarjetas de producto.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="pedidos" data-chap="3 · Pedidos y ventas">
+<header><div class="eyebrow">Capítulo 3</div><h2>Pedidos y ventas</h2><p>Del pedido pagado al despacho, más ventas manuales, links de pago y arreglos de pago.</p>
+<div class="roles"><span class="role">Operaciones</span><span class="role">Ventas</span><span class="role">Admin</span></div></header>
+
+<article class="step" id="s3-1" data-title="Atender un pedido de principio a fin">
+ <div class="head"><div class="num">3.1</div><div><h3>Atender un pedido de principio a fin</h3></div><div class="meta"><span>5 min por pedido</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Cada cambio de estado avisa al cliente por correo y queda en la bitácora del pedido.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Pedidos</b> filtre por estado. Un pedido <b>pagado</b> ya descontó inventario y envió la confirmación.</li>
+   <li>Ábralo: cliente, líneas, totales, entrega o retiro, mensaje de regalo, método de pago y, si aplica, los datos de factura electrónica.</li>
+   <li>Pase a <b>En preparación</b> → <b>Enviado</b> (puede anotar guía o seguimiento) → <b>Entregado</b>.</li>
+   <li>Para devolver dinero use <b>Reembolsar</b>: ONVO devuelve al mismo medio, el stock se repone y, si había factura, se emite la nota de crédito.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el pedido está en Entregado y el cliente recibió sus correos.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/pedidos.jpg" alt="Lista de pedidos"><figcaption>Pedidos con estado de pago, crédito y despacho.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s3-2" data-title="Pedidos B2B en revisión de crédito">
+ <div class="head"><div class="num">3.2</div><div><h3>Liberar un pedido B2B en revisión de crédito</h3></div><div class="meta"><span>2 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Un cliente con saldo vencido o sobre su límite no se despacha solo: alguien lo autoriza.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>Los pedidos retenidos aparecen como <b>En revisión de crédito</b> y notifican a los administradores.</li>
+   <li>Abra el pedido: verá el motivo (días vencidos, saldo, límite) y el saldo del cliente.</li>
+   <li>Si procede, <b>Liberar</b>; queda registrado quién lo hizo. Si no, contacte al cliente desde Cuentas por cobrar (paso 4.3).</li>
+   <li>Los días de tolerancia y el bloqueo se ajustan en Configuración.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el pedido pasa a su flujo normal y el saldo del cliente quedó considerado.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/pedido-revision-credito.jpg" alt="Pedido retenido por crédito"><figcaption>Detalle del pedido retenido con botón de liberar.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s3-3" data-title="Registrar una venta manual">
+ <div class="head"><div class="num">3.3</div><div><h3>Registrar una venta manual (mostrador o B2B fuera de línea)</h3></div><div class="meta"><span>3 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Para que los reportes y comisiones reflejen toda la venta, no solo la de la tienda en línea.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En Pedidos, <b>Registrar venta manual</b>.</li>
+   <li>Elija cliente (o escriba uno), vendedor, productos y cantidades; el precio se propone según la lista del cliente.</li>
+   <li>Método de pago: efectivo, transferencia, SINPE o tarjeta externa; fecha de la venta.</li>
+   <li>Guarde: crea un pedido pagado y descuenta inventario. Un usuario de Ventas queda asignado como vendedor automáticamente.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> la venta aparece en Pedidos y en el reporte ejecutivo del día.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/venta-manual.jpg" alt="Formulario de venta manual"><figcaption>Venta manual: cliente, vendedor, productos y método de pago.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s3-4" data-title="Enviar un link de pago">
+ <div class="head"><div class="num">3.4</div><div><h3>Enviar un link de pago de un solo uso</h3></div><div class="meta"><span>2 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Para cotizaciones, cobros a distancia o un pago que falló a último momento, sin datáfono.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Links de pago</b> cree uno: monto o productos, descripción, cliente y vencimiento (horas o días).</li>
+   <li>Copie el enlace y envíelo por WhatsApp o correo. El cliente paga con tarjeta o SINPE en una página de la marca.</li>
+   <li>Al pagar, el link se cierra, se crea el pedido o cobro y llega el recibo. Un link usado o vencido no acepta otro pago.</li>
+   <li>El Gerente también los crea: "creá un link de ₡150.000 para Restaurante X que venza en 48 horas".</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el link figura como pagado y el cobro aparece en Pedidos.</div>
+  <div class="warn"><b>Ojo.</b> Los links solo funcionan si el interruptor <b>Enlaces de pago activos</b> está encendido en Configuración.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/links-de-pago.jpg" alt="Links de pago"><figcaption>Creación y seguimiento de enlaces de pago de un solo uso.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s3-5" data-title="Arreglos de pago en cuotas">
+ <div class="head"><div class="num">3.5</div><div><h3>Hacer un arreglo de pago en cuotas</h3></div><div class="meta"><span>4 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Convierte una cuenta atrasada en cuotas mensuales con tarjeta, sin perseguir al cliente.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Arreglos de pago</b> elija cliente, monto total, número de cuotas y fecha de inicio.</li>
+   <li>Envíe el enlace seguro: el cliente guarda su tarjeta (o paga con otra o con SINPE) en cada cuota.</li>
+   <li>Cada cuota pagada rebaja el saldo en Cuentas por cobrar y avisa por correo; los reintentos son a 1, 3 y 7 días.</li>
+   <li><b>Cobrar cuota ahora</b> genera el enlace de la cuota del mes.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el arreglo muestra sus cuotas con estado y el saldo baja con cada pago.</div>
+  <div class="warn"><b>Ojo.</b> El cobro automático sin el cliente presente se activa solo cuando ONVO confirme esa modalidad; mientras tanto, el enlace de cada cuota.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/arreglos-de-pago.jpg" alt="Arreglos de pago"><figcaption>Planes de cuotas con cobro por enlace seguro.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="clientes" data-chap="4 · Clientes, zonas y cobros">
+<header><div class="eyebrow">Capítulo 4</div><h2>Clientes B2B, zonas, vendedores y cuentas por cobrar</h2><p>La base comercial: quién compra, quién lo atiende y cuánto debe.</p>
+<div class="roles"><span class="role">Gerencia</span><span class="role">Ventas</span><span class="role">Admin</span></div></header>
+
+<article class="step" id="s4-1" data-title="Cargar clientes desde Lucida">
+ <div class="head"><div class="num">4.1</div><div><h3>Cargar la base de clientes (desde Lucida o Excel)</h3></div><div class="meta"><span>20 min la primera vez</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Sin clientes cargados no hay segmentación, ni cuentas por cobrar, ni reportes por vendedor.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Clientes B2B</b> descargue la <b>plantilla CSV</b> y llénela desde su exportación de Lucida.</li>
+   <li>Si Lucida mezcló cédula, razón social, dirección y teléfono en una celda, use el <b>separador de campo combinado</b>: propone la división y usted la confirma.</li>
+   <li>Revise la <b>vista previa</b> (nuevos, actualizados, con error) y aplique. Reimportar el mismo archivo no duplica: la llave es la cédula.</li>
+   <li>Asigne <b>categoría</b> (AAA, AA, A, B), <b>canal</b>, <b>zona</b> y <b>vendedor</b>; una cuenta B2B aprobada se vincula sola por cédula.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> la lista filtra por vendedor, zona y categoría y cada ficha muestra sus compras por mes.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/clientes-b2b.jpg" alt="Clientes B2B"><figcaption>Clientes con zona, vendedor, saldo y días vencidos.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s4-2" data-title="Ficha del cliente y aprobación B2B">
+ <div class="head"><div class="num">4.2</div><div><h3>Trabajar la ficha del cliente y aprobar cuentas</h3></div><div class="meta"><span>3 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">La ficha reúne saldo, vencido, límite, compras por mes y por producto: la base de cualquier negociación.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>Abra un cliente: saldo, vencido, límite de crédito y plazo, compras mes a mes y desglose por producto, facturas y pedidos.</li>
+   <li>Edite límite, plazo, categoría o vendedor; todo queda auditado.</li>
+   <li>Las solicitudes de Mayoreo se aprueban desde <b>Clientes</b>: generan el código de cliente y el correo de bienvenida.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el cliente tiene vendedor, categoría, límite y, si corresponde, código activo.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/cliente-detalle.jpg" alt="Detalle de cliente"><figcaption>Ficha: saldo, vencido, límite, compras por mes y facturas.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s4-3" data-title="Cuentas por cobrar">
+ <div class="head"><div class="num">4.3</div><div><h3>Llevar las cuentas por cobrar</h3></div><div class="meta"><span>10 min por semana</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">La antigüedad del saldo decide si un pedido se libera y alimenta la matriz de riesgo del Gerente.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Cuentas por cobrar</b> importe el histórico (plantilla CSV) o registre facturas a mano: número, emisión, vencimiento, monto y saldo.</li>
+   <li>Vea la antigüedad por cliente y marque pagos parciales o totales.</li>
+   <li>Pida al Gerente la <b>matriz de riesgo</b>: clientes vencidos, días y exposición por vendedor y zona, con una recomendación por cliente.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> ningún saldo vencido sorprende al despachar.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/cuentas-por-cobrar.jpg" alt="Cuentas por cobrar"><figcaption>Facturas abiertas, antigüedad y retención de crédito.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s4-4" data-title="Zonas y vendedores">
+ <div class="head"><div class="num">4.4</div><div><h3>Definir zonas y vendedores</h3></div><div class="meta"><span>10 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">GAM y rural por provincias, cada zona con su vendedor por defecto: así se reparten clientes y comisiones.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Zonas</b> cree o edite zonas (tipo GAM o rural, provincias y cantones) y su vendedor por defecto.</li>
+   <li>En <b>Vendedores</b> registre nombre, correo (el mismo con el que inicia sesión si tendrá rol Ventas), zonas y porcentaje de comisión.</li>
+   <li>Un usuario con rol Ventas solo ve los clientes y comisiones de su propio registro de vendedor.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> todo cliente tiene zona y vendedor.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/vendedores.jpg" alt="Vendedores"><figcaption>Vendedores, zonas asignadas y porcentaje de comisión.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="catalogo" data-chap="5 · Catálogo, precios, ofertas e inventario">
+<header><div class="eyebrow">Capítulo 5</div><h2>Catálogo, precios, ofertas, combos e inventario</h2>
+<div class="roles"><span class="role">Admin</span><span class="role">Operaciones</span></div></header>
+
+<article class="step" id="s5-0" data-title="Editar un producto: precio, costo, CABYS, stock">
+ <div class="head"><div class="num">5.0</div><div><h3>Editar un producto</h3></div><div class="meta"><span>3 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Precio público y especial, costo privado, CABYS para facturar, mínimo y plazo para alertas: todo en una ficha.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Productos</b> abra la ficha: precios (el IVA se calcula), <b>costo</b> (nunca visible en la tienda), <b>CABYS</b> de 13 dígitos e IVA, stock con ajuste y motivo, mínimo y plazo de embarque, destacado, nuevo y "disponible bajo pedido".</li>
+   <li><b>Fotos</b>: elija la principal, la de campaña y la galería; "Marcar como packshot" corrige clasificaciones.</li>
+   <li>Textos: descripción, notas de cata y maridaje (si dicen "Borrador IA · por revisar", apruébelos o corríjalos).</li>
+   <li>Para muchos productos use <b>Importar CSV</b> (columnas del Excel de la casa, más COSTO y CABYS) con vista previa; nunca borra.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el producto se ve bien en la tienda y no aparece en "productos sin CABYS".</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/producto-editor.jpg" alt="Editor de producto"><figcaption>Editor con costo, CABYS, IVA, stock mínimo y fotos.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s5-1" data-title="Crear una oferta o un código de promoción">
+ <div class="head"><div class="num">5.1</div><div><h3>Crear una oferta por tiempo limitado o un código</h3></div><div class="meta"><span>2 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Ofertas de 24 horas o 3 días por producto, familia o casa, con cuenta regresiva en la tienda.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Ofertas</b> cree una: porcentaje o monto, alcance (producto, categoría, casa o todo), fechas, pública o también B2B.</li>
+   <li>Opcional: un <b>código</b> (FURCA10), con usos máximos, usos por cliente y monto mínimo.</li>
+   <li>O pídalo al Gerente: "10 % en todos los vinos por 3 días". Le muestra alcance, productos y fechas y espera su <b>Confirmar</b>.</li>
+   <li>Se aplica una sola promoción por línea (la mejor); los combos no acumulan ofertas.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> la tienda muestra el precio tachado y el chip "Oferta · termina en…".</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/ofertas.jpg" alt="Ofertas"><figcaption>Promociones, códigos y límites de uso.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s5-2" data-title="Crear un combo">
+ <div class="head"><div class="num">5.2</div><div><h3>Crear un combo (nuevo SKU publicable)</h3></div><div class="meta"><span>3 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">"Gin tonic": Selva Gin más seis tónicas con 15 % de descuento, vendido como un producto.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Combos</b> defina nombre, componentes con cantidades y precio (porcentaje sobre la suma o precio fijo).</li>
+   <li>Si no sube foto, la tarjeta se genera con los packshots de los componentes.</li>
+   <li>Aparece en la categoría Combos con su ficha; el stock se valida por componente y se descuenta al pagar.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el combo se puede comprar y su ficha muestra la suma tachada.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/combos.jpg" alt="Combos"><figcaption>Combos con sus componentes y precio.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s5-3" data-title="Inventario: alertas y simulación">
+ <div class="head"><div class="num">5.3</div><div><h3>Vigilar inventario: alertas y simulación de pedidos grandes</h3></div><div class="meta"><span>5 min por semana</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">La alerta considera la demanda de 90 días y el plazo de embarque: avisa antes de quedarse sin producto.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En el Panel, <b>Alertas de inventario</b>: productos bajo el mínimo proyectado (stock menos venta diaria por plazo de embarque).</li>
+   <li>Ajuste stock desde la ficha del producto (motivo y referencia) o importe conteos por CSV.</li>
+   <li>Antes de aceptar un pedido grande, pídale al Gerente "simulá un pedido de 50 cajas de X": le dice qué quedaría bajo mínimo.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> ningún producto llega a cero sin aviso previo.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/inventario-alertas.jpg" alt="Alertas de inventario"><figcaption>Productos bajo mínimo proyectado según demanda y plazo.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="facturacion" data-chap="6 · Facturación electrónica">
+<header><div class="eyebrow">Capítulo 6</div><h2>Facturación electrónica (Hacienda)</h2><p>La plataforma firma y envía comprobantes v4.4 directo a Hacienda, sin proveedor intermedio.</p>
+<div class="roles"><span class="role">Admin</span><span class="role">Operaciones</span></div></header>
+
+<article class="step" id="s6-1" data-title="Configurar el emisor y las credenciales de Hacienda">
+ <div class="head"><div class="num">6.1</div><div><h3>Configurar el emisor y las credenciales</h3></div><div class="meta"><span>15 min, una vez</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Hacienda exige datos exactos del emisor, consecutivos y la llave criptográfica.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Configuración → Facturación</b>: razón social, cédula jurídica, nombre comercial, código de actividad, ubicación, teléfono, correo, sucursal y terminal.</li>
+   <li>Las credenciales de ATV (sandbox y producción), el archivo .p12 y su PIN se guardan como <b>secretos</b> por el equipo técnico; aquí solo se ve si están presentes.</li>
+   <li>Empiece en modo <b>sandbox</b>; cambie a producción cuando las pruebas pasen.</li>
+   <li>Cargue el <b>CABYS</b> de todos los productos (reporte "productos sin CABYS").</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el estado de Hacienda dice "configurado (sandbox)" y no hay productos sin CABYS.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/configuracion.jpg" alt="Configuración"><figcaption>Configuración: datos de la tienda, ONVO, envíos y facturación.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s6-2" data-title="Emitir una factura y una nota de crédito">
+ <div class="head"><div class="num">6.2</div><div><h3>Emitir una factura y consultar su estado</h3></div><div class="meta"><span>1 min por factura</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Cada pedido pagado con datos fiscales completos puede facturarse con un clic, o automáticamente al pagar.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En el pedido, <b>Emitir factura</b>. Si faltan datos (cédula del receptor, CABYS de una línea) se lo dice exactamente.</li>
+   <li>La plataforma genera clave y consecutivo, firma el XML, lo envía y consulta el estado cada 5 minutos: <b>aceptada</b> o <b>rechazada</b> con el mensaje de Hacienda.</li>
+   <li>Al aceptarse, el cliente recibe el PDF con QR y los XML por correo. Todo queda en <b>Facturas</b>, con reenvío y "consultar estado".</li>
+   <li>Un <b>reembolso</b> de un pedido facturado emite la nota de crédito sola.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> la factura figura como aceptada y el PDF abre con su QR.</div>
+  <div class="warn"><b>Ojo.</b> Una factura rechazada no se "corrige": se emite una nueva tras arreglar el dato (vea Protocolos).</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/facturas.jpg" alt="Facturas"><figcaption>Facturas electrónicas por estado ante Hacienda.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="gerencia" data-chap="7 · Reportes, presupuesto y agentes">
+<header><div class="eyebrow">Capítulo 7</div><h2>Reportes, presupuesto, comisiones y agentes de IA</h2>
+<div class="roles"><span class="role">Gerencia</span><span class="role">Superadmin</span></div></header>
+
+<article class="step" id="s7-1" data-title="Cargar el histórico de ventas y leer el reporte ejecutivo">
+ <div class="head"><div class="num">7.1</div><div><h3>Cargar el histórico y leer el reporte ejecutivo</h3></div><div class="meta"><span>30 min la carga; 5 min la lectura</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Mes actual contra el anterior y contra el mismo mes del año pasado solo existe si el histórico está cargado.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Reporte ejecutivo → Importar ventas históricas</b> use la plantilla (fecha, cliente, SKU, cantidad, precio, canal, vendedor). La importación es idempotente y no toca el stock actual.</li>
+   <li>Lea: ingresos, pedidos, unidades, ticket promedio, D2C vs B2B, por SKU con margen cuando hay costo, top 10 y 100 de productos y clientes, por vendedor y zona.</li>
+   <li>Exporte CSV o PDF, o programe el reporte (diario, quincenal, cierre de mes) en Notificaciones.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el comparativo interanual muestra datos y explica la diferencia por volumen, precio y mezcla.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/reporte-ejecutivo.jpg" alt="Reporte ejecutivo"><figcaption>Ventas por período, vendedor y zona con exportación.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s7-2" data-title="Presupuesto, metas y comisiones">
+ <div class="head"><div class="num">7.2</div><div><h3>Presupuesto, metas y comisiones</h3></div><div class="meta"><span>20 min, luego mensual</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Proyectado contra real por día, semana, mes y trimestre, con metas por vendedor y zona y el estado de comisiones.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Presupuesto</b> llene la grilla anual (total, categoría, casa, vendedor, zona o cliente) o copie el año anterior con un porcentaje.</li>
+   <li>Las metas por vendedor y zona muestran avance diario y ritmo necesario; el Panel sugiere recurrentes que no pidieron esta semana.</li>
+   <li>En <b>Comisiones</b> revise el estado mensual por vendedor (ventas netas menos reembolsos y notas de crédito), apruébelo y márquelo como pagado.</li>
+   <li>Para negociar sin perder margen, pida al Gerente "simular negociación" con descuento, regalías o patrocinio.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el mes tiene presupuesto, cada vendedor su meta y el estado de comisiones aprobado.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/presupuesto.jpg" alt="Presupuesto"><figcaption>Cuadrícula anual y real contra presupuesto.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s7-3" data-title="Trabajar con el Gerente de Operaciones">
+ <div class="head"><div class="num">7.3</div><div><h3>Trabajar con el Gerente de Operaciones (agente interno)</h3></div><div class="meta"><span>Diario</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Responde con datos reales y ejecuta cambios solo con su confirmación; nunca inventa cifras.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Gerente</b> use las consultas rápidas o escriba: "¿qué se vendió esta semana?", "productos con stock bajo", "matriz de riesgo", "recurrentes que no pidieron".</li>
+   <li>Pida documentos: <b>brief de portafolio</b> o <b>propuesta a la medida</b> ("8 vinos entre ₡15.000 y ₡40.000 para FURCA") → PDF y enlace compartible, listados en Briefs.</li>
+   <li>Pida cambios: oferta, combo, precio, liberar crédito, asignar vendedor. Muestra el resumen y espera <b>Confirmar</b>; todo queda auditado.</li>
+   <li>Para completar fichas, "investigá El Tequileño 1959 Añejo": lee el sitio oficial de la casa y propone datos con su fuente, que usted aprueba.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> obtuvo una respuesta con tabla y confirmó (o canceló) una acción.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/gerente.jpg" alt="Gerente de Operaciones"><figcaption>Respuesta del Gerente en tabla.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s7-4" data-title="Ajustar los agentes y vigilar su consumo">
+ <div class="head"><div class="num">7.4</div><div><h3>Ajustar los agentes y vigilar su consumo</h3></div><div class="meta"><span>10 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">La voz del Concierge, las reglas del Gerente, el modelo y el presupuesto diario se administran sin programar.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Agentes</b>: instrucciones, FAQs, políticas y tono de cada agente; ejemplos de conversación; modelo y proveedor; "Probar conexión".</li>
+   <li>Consumo de hoy y del mes con costo estimado, últimos errores y presupuesto diario por agente.</li>
+   <li>Lea las últimas conversaciones para detectar qué preguntan los clientes y qué falta en el catálogo.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> ambos agentes muestran "Conectado" y el consumo está dentro del presupuesto.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/agentes.jpg" alt="Agentes"><figcaption>Modelo, proveedor, consumo y conocimiento de los agentes.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="administracion" data-chap="8 · Usuarios, notificaciones y casos">
+<header><div class="eyebrow">Capítulo 8</div><h2>Usuarios, notificaciones, casos y configuración</h2>
+<div class="roles"><span class="role">Superadmin</span><span class="role">Admin</span></div></header>
+
+<article class="step" id="s8-1" data-title="Crear usuarios y asignar roles">
+ <div class="head"><div class="num">8.1</div><div><h3>Crear usuarios y asignar roles</h3></div><div class="meta"><span>2 min por usuario</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Cada persona con su acceso y el rol justo; nada de contraseñas compartidas.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li>En <b>Usuarios → Nuevo usuario</b>: correo, nombre y contraseña (o invitación por correo).</li>
+   <li>Elija el rol. Solo un superadmin cambia roles o concede superadmin. Un usuario de Ventas debe tener un vendedor con el mismo correo.</li>
+   <li>Restablecer contraseña, desactivar, reactivar o eliminar desde la misma fila; nadie puede eliminarse a sí mismo ni dejar la tienda sin superadmin.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> la persona entra y ve solo lo que su rol permite.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/usuarios.jpg" alt="Usuarios y roles"><figcaption>Cuentas de administración con selector de rol.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s8-2" data-title="Notificaciones y casos">
+ <div class="head"><div class="num">8.2</div><div><h3>Notificaciones, correos y casos (CRM)</h3></div><div class="meta"><span>5 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">La campana avisa en el momento; los casos ordenan lo que requiere seguimiento humano.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li><b>Notificaciones</b>: pedidos pagados, solicitudes B2B, leads, reposición, casos. Cada admin elige qué recibir por correo y si quiere el resumen programado.</li>
+   <li><b>Casos</b>: se crean solos desde contacto, Concierge y Mayoreo; asígnelos, comente (al asignado o a todos) y resuelva con notas; el cliente recibe la resolución.</li>
+   <li>Los correos a clientes se activan al verificar el dominio en el proveedor de correo; hasta entonces el modo prueba solo envía al administrador principal.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> ningún caso queda sin asignar al cierre del día.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/casos.jpg" alt="Casos"><figcaption>Caso abierto en el panel lateral con actividad y comentarios.</figcaption></figure></div>
+</article>
+
+<article class="step" id="s8-3" data-title="Configuración: ONVO, envíos, video y textos">
+ <div class="head"><div class="num">8.3</div><div><h3>Configuración: pagos, envíos, Home y agentes</h3></div><div class="meta"><span>10 min</span><label class="chk"><input type="checkbox"> Hecho</label></div></div>
+ <div class="why">Lo que el equipo cambia sin desarrollador vive aquí.</div>
+ <div class="body"><div>
+  <ol class="acts">
+   <li><b>ONVO</b>: llave publicable, modo prueba o live, política de 3DS, interruptores de links y arreglos de pago, URL del webhook.</li>
+   <li><b>Envíos</b>: grilla por zona (GAM, rural, retiro), tramos de monto, mínimo por zona y envío gratis.</li>
+   <li><b>Home</b>: las dos líneas del titular, el video del hero (varias versiones), fotos de categorías y de "Tres principios"; correo, teléfono y WhatsApp de contacto.</li>
+   <li><b>Administradores</b> y <b>Facturación</b> tienen su sección propia.</li>
+  </ol>
+  <div class="done-box"><b>Terminó cuando…</b> el checkout cobra con los montos de envío reales y el Home dice lo que ustedes quieren.</div>
+ </div><figure><img data-src="https://ps-onvo.com/guia/shots/configuracion-envios.jpg" alt="Configuración de envíos"><figcaption>Tarifas de envío por zona, mínimos y envío gratis.</figcaption></figure></div>
+</article>
+</section>
+
+<section class="chap" id="protocolos" data-chap="9 · Protocolos operativos">
+<header><div class="eyebrow">Capítulo 9</div><h2>Protocolos operativos</h2><p>Qué hacer, en orden, en las situaciones que se repiten. Escritos a partir de los flujos reales de la plataforma.</p></header>
+<div class="proto"><h3>Pedido nuevo (tienda)</h3><ol><li>Llega la notificación "pedido pagado".</li><li>Operaciones lo pasa a En preparación y arma el despacho.</li><li>Enviado con nota de guía → Entregado al confirmar.</li><li>Si pidió factura electrónica: Emitir factura (o automática).</li></ol></div>
+<div class="proto"><h3>Pedido B2B en revisión de crédito</h3><ol><li>Ver motivo y saldo en el pedido.</li><li>Si el saldo está al día o hay acuerdo, Liberar.</li><li>Si no, contactar al cliente; opcionalmente abrir un arreglo de pago.</li><li>Registrar el resultado en el caso del cliente.</li></ol></div>
+<div class="proto"><h3>Reembolso y nota de crédito</h3><ol><li>Desde el pedido, Reembolsar (total o parcial).</li><li>ONVO devuelve al medio original; el stock se repone.</li><li>Si había factura aceptada, la nota de crédito sale sola; verifique en Facturas.</li></ol></div>
+<div class="proto"><h3>Factura rechazada por Hacienda</h3><ol><li>Leer el mensaje de rechazo en Facturas.</li><li>Corregir el dato (cédula o ubicación del receptor, CABYS, totales).</li><li>Emitir de nuevo desde el pedido; la rechazada queda en el historial.</li></ol></div>
+<div class="proto"><h3>Link de pago</h3><ol><li>Crear con monto o productos, cliente y vencimiento.</li><li>Enviar el enlace; esperar la notificación de pago.</li><li>Si venció sin pago, crear uno nuevo; los links no se reutilizan.</li></ol></div>
+<div class="proto"><h3>Arreglo de pago</h3><ol><li>Acordar monto, cuotas y fecha de inicio con el cliente.</li><li>Crear el arreglo y enviar el enlace para guardar la tarjeta.</li><li>Cada mes, Cobrar cuota ahora si no hay cobro automático; seguir reintentos y correos.</li></ol></div>
+<div class="proto"><h3>Alta de cliente y vendedor</h3><ol><li>Vendedor primero (correo igual al de su usuario si tendrá rol Ventas).</li><li>Cliente con cédula, canal, categoría, zona, vendedor, límite y plazo.</li><li>Si compra en línea, aprobar su cuenta B2B y enviar el código.</li></ol></div>
+<div class="proto"><h3>Carga de inventario</h3><ol><li>Conteo físico por SKU.</li><li>Importar CSV (columna STOCK) con vista previa o ajustar por producto con motivo.</li><li>Revisar alertas al día siguiente.</li></ol></div>
+<div class="proto"><h3>Fin de mes</h3><ol><li>Reporte ejecutivo del mes; comparar contra presupuesto y contra el año anterior.</li><li>Aprobar y pagar comisiones.</li><li>Revisar cuentas por cobrar y matriz de riesgo.</li><li>Cargar el presupuesto del mes siguiente si falta.</li></ol></div>
+</section>
+
+<section class="chap" id="problemas" data-chap="10 · Problemas frecuentes">
+<header><div class="eyebrow">Capítulo 10</div><h2>Problemas frecuentes</h2></header>
+<div class="faq">
+<details><summary>No veo un módulo del menú</summary><p>Su rol no lo incluye. Revise el Panel de control; un superadmin puede cambiar el rol en Usuarios.</p></details>
+<details><summary>El Concierge dice "no está disponible"</summary><p>Pulse Reintentar. Si persiste, en Agentes revise "Probar conexión", el presupuesto diario y los últimos errores. La tienda sigue funcionando aunque el agente falle.</p></details>
+<details><summary>Un producto no tiene foto o sale una botella mal recortada</summary><p>La plataforma solo muestra fotos de botella completa; las recortadas se marcan como "Fragmento". Suba el packshot a la carpeta de la casa en Cloudflare, sincronice en Medios y elija la foto en la ficha.</p></details>
+<details><summary>El checkout dice "ONVO no configurado"</summary><p>Falta la llave publicable en Configuración → ONVO o el modo no coincide con las llaves (prueba vs live).</p></details>
+<details><summary>No llegan correos a clientes</summary><p>El modo prueba envía solo al administrador principal hasta verificar el dominio en el proveedor de correo. Revise Notificaciones.</p></details>
+<details><summary>Un pedido no descontó inventario</summary><p>Solo los pedidos pagados descuentan. Revise el estado de pago y el webhook de ONVO en Configuración.</p></details>
+<details><summary>La factura sale rechazada</summary><p>Lea el mensaje de Hacienda: casi siempre es cédula o ubicación del receptor, CABYS faltante o totales. Corrija y emita de nuevo.</p></details>
+<details><summary>Importé un CSV y no cambió nada</summary><p>Revise la vista previa: las filas con error se listan. La llave de producto es el SKU y la de cliente la cédula.</p></details>
+<details><summary>No puedo eliminar un usuario</summary><p>No puede eliminarse a sí mismo ni al último superadmin activo. Desactívelo o pida a otro superadmin.</p></details>
+</div>
+</section>
+
+</main>
+</div>
+
+<section class="help"><div class="in">
+ <div class="eyebrow">Ayuda</div>
+ <h2>¿Algo no cuadra?</h2>
+ <p>Escriba al equipo de soporte con: la pantalla donde ocurrió, el usuario con el que entró, la hora y una captura. Si es un pedido, su número; si es una factura, su clave. Con eso se resuelve en la primera respuesta.</p>
+ <p style="color:var(--humo);font-size:.85rem">Premium Spirits · Plataforma construida por Logeek sobre ONVO Shops. Venta exclusiva a mayores de 18 años · Ley 9047.</p>
+</div></section>
+
+<div class="lb" id="lb" role="dialog" aria-label="Captura ampliada"><img id="lbimg" alt=""></div>
+
+<script>
+(function(){
+ var KEY='ps-guia-progress-v1';
+ var steps=[].slice.call(document.querySelectorAll('.step'));
+ var toc=document.getElementById('toc');
+ var saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+ document.querySelectorAll('.chap').forEach(function(ch){
+  var a=document.createElement('a');a.href='#'+ch.id;a.textContent=ch.dataset.chap;toc.appendChild(a);
+  ch.querySelectorAll('.step').forEach(function(st){var s=document.createElement('a');s.className='sub';s.href='#'+st.id;s.dataset.for=st.id;s.textContent=st.querySelector('.num').textContent+'  '+st.dataset.title;toc.appendChild(s)});
+ });
+ function paint(){
+  var done=0;steps.forEach(function(st){var cb=st.querySelector('.chk input');var on=!!saved[st.id];cb.checked=on;st.classList.toggle('done',on);var l=toc.querySelector('[data-for="'+st.id+'"]');if(l)l.classList.toggle('done',on);if(on)done++});
+  var pct=Math.round(done/steps.length*100);document.getElementById('pct').textContent=pct+' % completado ('+done+' de '+steps.length+')';document.getElementById('fill').style.width=pct+'%';
+ }
+ steps.forEach(function(st){st.querySelector('.chk input').addEventListener('change',function(e){saved[st.id]=e.target.checked;try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(x){}paint()})});
+ document.getElementById('reset').addEventListener('click',function(){if(confirm('¿Reiniciar el progreso de la guía?')){saved={};try{localStorage.removeItem(KEY)}catch(x){}paint()}});
+ paint();
+ var io='IntersectionObserver'in window?new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var im=en.target;im.src=im.dataset.src;io.unobserve(im)}})},{rootMargin:'400px'}):null;
+ document.querySelectorAll('img[data-src]').forEach(function(im){if(io)io.observe(im);else im.src=im.dataset.src});
+ var lb=document.getElementById('lb'),lbi=document.getElementById('lbimg');
+ document.addEventListener('click',function(e){var t=e.target;if(t.tagName==='IMG'&&t.closest('figure')){lbi.src=t.dataset.src||t.src;lbi.alt=t.alt;lb.classList.add('on')}else if(t===lb||t===lbi){lb.classList.remove('on')}});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+ var q=document.getElementById('q');
+ function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+ q.addEventListener('input',function(){var v=norm(q.value.trim());document.querySelectorAll('.chap').forEach(function(ch){var any=false;ch.querySelectorAll('.step,.proto,details').forEach(function(el){var hit=!v||norm(el.textContent).indexOf(v)>-1;el.classList.toggle('hidden',!hit);if(hit)any=true});ch.classList.toggle('hidden',!any&&!!v)})});
+})();
+</script>
+</body>
+</html>
