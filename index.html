@@ -56,6 +56,14 @@ figcaption{font-size:.78rem;color:var(--piedra);padding:.45rem .2rem 0}
 .help{background:var(--ebano);color:var(--pergamino);padding:2.5rem 1.25rem;margin-top:3rem}.help .in{max-width:1180px;margin:0 auto}.help a{color:var(--ambar)}
 .lb{position:fixed;inset:0;background:rgba(18,14,10,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:2rem}.lb.on{display:flex}.lb img{max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-out}
 .hidden{display:none!important}
+.vt{background:var(--ebano2);color:var(--pergamino);padding:2.5rem 1.25rem;border-top:1px solid rgba(212,162,76,.35);border-bottom:1px solid rgba(212,162,76,.35)}
+.vt .in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center}
+.vt .eyebrow{color:var(--ambar)}.vt h2{margin:.3rem 0 .6rem}.vt p{color:var(--humo);margin:0 0 .8rem}
+.vt .player{position:relative;border:1px solid rgba(212,162,76,.45);background:#000}
+.vt video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.vt .meta{font-family:Marcellus,serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ambar);margin-top:.6rem}
+.vt .btn{border-color:var(--ambar);background:var(--ambar);color:var(--ebano);margin-top:.4rem}
+@media(max-width:980px){.vt .in{grid-template-columns:1fr}}
 @media(max-width:980px){.layout{grid-template-columns:1fr}.toc{position:static;max-height:none;margin-bottom:1rem}.body{grid-template-columns:1fr}}
 @media print{.top,.toc,.lb,.btn,.chk,.search{display:none!important}.layout{display:block;padding:0}.step{break-inside:avoid;border:1px solid #999}body{background:#fff}.hero{background:#fff;color:#000}.hero p{color:#333}figure img{aspect-ratio:auto}}
 </style>
@@ -73,6 +81,17 @@ figcaption{font-size:.78rem;color:var(--piedra);padding:.45rem .2rem 0}
  <div class="eyebrow">Guía de uso · Premium Spirits · edición 26 de noviembre de 2026 (rev. 2)</div>
  <h1>Opere Premium Spirits<br>desde una sola plataforma</h1>
  <p>Tienda con compra sin registro y cuenta del cliente, pedidos, clientes B2B, cuentas por cobrar, inventario, ofertas, facturación electrónica, reportes y dos agentes de inteligencia artificial. Esta guía va por rol y por tarea: cada paso dice por qué se hace, qué hacer, cómo se ve en pantalla y cómo saber que terminó. Marque los pasos a medida que los complete; el avance queda guardado en su navegador.</p>
+</div></section>
+
+<section class="vt" id="video-tutorial-1"><div class="in">
+ <div class="player"><video controls preload="metadata" playsinline poster="https://pub-eb9d2ef8703d4fbb92908679bc28e67a.r2.dev/Assets/VIDEO/tutorial-1-poster.jpg"><source src="https://pub-eb9d2ef8703d4fbb92908679bc28e67a.r2.dev/Assets/VIDEO/tutorial-1.mp4" type="video/mp4">Su navegador no reproduce video; descárguelo desde el botón.</video></div>
+ <div>
+  <div class="eyebrow">Video tutorial 1</div>
+  <h2>Premium Spirits, una sola plataforma</h2>
+  <p>Noventa segundos para entender qué hace la plataforma y por qué importa: tienda sin fricción, cuentas de clientes, administración completa, facturación electrónica y dos agentes de inteligencia artificial. Es el punto de partida para todo colaborador; los pasos detallados están en los capítulos de abajo.</p>
+  <div class="meta">1:30 · Español · Visión general para gerencia y equipo</div>
+  <a class="btn" href="https://pub-eb9d2ef8703d4fbb92908679bc28e67a.r2.dev/Assets/VIDEO/tutorial-1.mp4" download>Descargar MP4</a>
+ </div>
 </div></section>
 
 <div class="layout">
@@ -611,6 +630,7 @@ figcaption{font-size:.78rem;color:var(--piedra);padding:.45rem .2rem 0}
  var toc=document.getElementById('toc');
  var saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
  // TOC
+ var v=document.createElement('a');v.href='#video-tutorial-1';v.textContent='▶ Video tutorial 1';toc.appendChild(v);
  document.querySelectorAll('.chap').forEach(function(ch){
   var a=document.createElement('a');a.href='#'+ch.id;a.textContent=ch.dataset.chap;toc.appendChild(a);
   ch.querySelectorAll('.step').forEach(function(st){var s=document.createElement('a');s.className='sub';s.href='#'+st.id;s.dataset.for=st.id;s.textContent=st.querySelector('.num').textContent+'  '+st.dataset.title;toc.appendChild(s)});
